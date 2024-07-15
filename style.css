@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --progress-control-value: 0;
+}
+
+body {
+    width: 100svw;
+    height: 100svh;
+    background-color: #aaaaaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    box-shadow: 2px 2px 4px #000, -2px -2px 4px #000;
+    border-radius: 20px;
+    background: url("./assets/1.jpg") center/cover no-repeat;
+    overflow: hidden;
+}
+
+.tools {
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    bottom: -120px;
+    background-color: #d8d2d2;
+    border-radius: 40px;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.small-img {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    box-shadow: 2px 2px 2px #333, -2px -2px 2px #333;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    background: url("./assets/1.jpg") center/cover no-repeat;
+    filter: brightness(1.75);
+}
+
+.progress-control {
+    width: 80%;
+    height: 4px;
+    border: 1px solid rgb(76, 76, 74);
+    background-color: #aaaaaa;
+    border-radius: 3px;
+    margin-top: 80px;
+    position: relative;
+}
+
+.progress-control::after{
+    position: absolute;
+    height: 100%;
+    width: var(--progress-control-value);
+    background-color: rgb(86, 12, 12);
+    top: 0;
+    left: 0;
+    content: '';
+}
+
+.time {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.title {
+    text-align: center;
+    margin-top: 30px;
+}
+
+h3 {
+    margin-top: 10px;
+    font-weight: 200;
+}
+
+.control-buttons {
+    display: flex;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+
+.sound-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.volume-bar {
+    width: 200px;
+    height: 4px;
+    border: 1px solid rgb(76, 76, 74);
+    background-color: #aaaaaa;
+    border-radius: 5px;
+}
+
+i {
+    font-size: 1.3rem;
+    transition: 0.2s;
+    opacity: 1;
+}
+
+i:hover {
+    cursor: pointer;
+    color: darkgreen;
+}
+
+i:active {
+    color: darkcyan;
+    transform: translateY(-5px);
+}
+
+.hide {
+    opacity: 0;
+}
+
+.start, .end {
+    height: 20px;
+}
