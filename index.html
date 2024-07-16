@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Audio Player</title>
     <link rel="stylesheet" href="style.css">
-    <script src="./script.js" defer></script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
 </head>
 <body>
 
@@ -34,23 +34,22 @@
 
             <div class="control-buttons">
                 <i class="fa-solid fa-arrow-rotate-right"></i>
-                <i class="fa-solid fa-backward-step"></i>
-                <i class="fa-solid fa-play"></i>
-                <i class="fa-solid fa-pause hide"></i>
-                <i class="fa-solid fa-forward-step"></i>
-                <i class="fa-solid fa-heart"></i>
-                <i class="fa-regular fa-folder-open"></i>
+                <div class="play-pause-icon-box"></div>
             </div>
 
             <div class="sound-buttons">
-                <i class="fa-solid fa-volume-high"></i>
+                <div class="low-volume-icon-box"></div>
                 <div class="volume-bar"></div>
-                <i class="fa-solid fa-volume-low"></i>
-                <i class="fa-solid fa-volume-xmark"></i>
+                <i class="fa-solid fa-volume-high"></i>
+                
+
+                </div>                
             </div>
         </div>
-        <div class="small-img"></div>
+        <div class="small-img"><div class="image"></div></div>
     </div>
     
+    <script src="./script.js" defer></script>
+
 </body>
 </html>
